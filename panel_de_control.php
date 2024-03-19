@@ -68,32 +68,29 @@ $resultado = $mysqli->query($sql);
 				<thead>
 					<tr class="table-primary">
 						<th>Nombre</th>
-						<th>Fecha de inscripcion</th>
+						<th>Apellido</th>
+						<th>Telefono</th>
+						<th>Cuerda</th>
+						<th>Propiedad</th>
 						<th></th>
-						<th></th>
-						
 					</tr>
 				</thead>
 				<tbody>
 					<?php
 					while ($fila = $resultado->fetch_assoc()) {
 						echo "<tr class='table'>";
-						echo "<td><a href='sesiones.php?id=$fila[ID]'>$fila[Nombre]</a></td>";
-						echo "<td>$fila[Fecha_inscripcion]</td>";
+						echo "<td><a href='sesiones.php?id=$fila[ID]'>$fila[nombre]</a></td>";
+						echo "<td>$fila[apellido]</td>";
+						echo "<td>$fila[telefono]</td>";
+						echo "<td>$fila[cuerda]</td>";
+						echo "<td>$fila[propiedad]</td>";
 						echo "<td><a class='btn btn-danger' href='eliminar.php?id=$fila[ID]'>Eliminar</a></td>";
-						echo "<td><a class='btn btn-warning'href='modificar.php?id=$fila[ID]'>Modificar </a></td>";
 						echo "</tr>";
 					}
 					?>
 				</tbody>
 			</table>
 		</div>
-	</div>
-		<div class="d-flex flex-column ">
-		<h1 class="align-self-center align-self-xl-center align-self-lg-center align-self-md-center align-self-sm-center">Clientes satisfechos</h1>
-		<img src="images/manu.jpg" alt="grande" style="width: 35%;" class="align-self-center align-self-xl-center align-self-lg-center align-self-md-center align-self-sm-center">
-		</div>				
-	</div>
 
 
 
