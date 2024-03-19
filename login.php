@@ -39,7 +39,12 @@ $resultado = $mysqli->query($sql);
 //se extrae el registro. no se hace en bucle porque el resultado debe ser unico
 $fila = $resultado->fetch_assoc();
 if ($fila){
-    header("location: panel_de_control.php");
+	if($usuario == "david"){
+		header("location: panel_de_control.php");
+	}else{
+		header("location: menu_usuario.php");
+	}
+
 }else{
     echo "<div class='d-flex justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-center justify-content-xl-center' style='width:100%'>";
     echo "<h3>Usuario o contraseña incorrectos.</h3>";
