@@ -1,0 +1,26 @@
+body{
+    background-color: black;
+    color: gold;
+}
+.columnas{
+    color: gold;
+}
+.display{
+    color:black;
+}
+.btn-primary{
+    color:black
+}
+.btn-danger{
+    color: black;
+}
+
+.alert-primary{
+    color: gold;
+    background-color: black;
+}
+
+.btn-primary{
+    color: gold;
+    background-color: black;
+}

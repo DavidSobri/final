@@ -1,0 +1,22 @@
+body{
+    background-color: grey;
+    color: gold;
+}
+
+.form-group{
+    color:black;
+}
+
+.display{
+    color:grey;
+}
+.btn-primary{
+    color:black
+}
+.btn-danger{
+    color: black;
+}
+
+label{
+    color: gold;
+}
