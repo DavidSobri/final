@@ -1,6 +1,6 @@
 <?php
 require 'conexion.php';
-$sql = "SELECT * FROM usuarios";
+$sql = "SELECT * FROM musico";
 $resultado = $mysqli->query($sql);
 
 ?>
@@ -17,7 +17,7 @@ $resultado = $mysqli->query($sql);
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/jquery.dataTables.min.css">
 	<link rel="stylesheet" href="estilos.css">
-	<link rel="shortcut icon" href="images/icono.png">
+	<link rel="shortcut icon" href="images/logo.jpg">
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -30,6 +30,7 @@ $resultado = $mysqli->query($sql);
 	<header>
 		
 	<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+	<img src="images/logo.jpg" alt="grande" style="width: 35px;" class="align-self-left">
   <h1 class="navbar-brand">Agrupacion Santa Maria Magdalena</h1>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -71,7 +72,8 @@ $resultado = $mysqli->query($sql);
 						<th>Apellido</th>
 						<th>Telefono</th>
 						<th>Cuerda</th>
-						<th>Propiedad</th>
+						<th>Instrumento Propio</th>
+						<th></th>
 						<th></th>
 					</tr>
 				</thead>
@@ -79,12 +81,13 @@ $resultado = $mysqli->query($sql);
 					<?php
 					while ($fila = $resultado->fetch_assoc()) {
 						echo "<tr class='table'>";
-						echo "<td><a href='sesiones.php?id=$fila[ID]'>$fila[nombre]</a></td>";
+						echo "<td>$fila[nombre]</td>";
 						echo "<td>$fila[apellido]</td>";
 						echo "<td>$fila[telefono]</td>";
 						echo "<td>$fila[cuerda]</td>";
-						echo "<td>$fila[propiedad]</td>";
-						echo "<td><a class='btn btn-danger' href='eliminar.php?id=$fila[ID]'>Eliminar</a></td>";
+						echo "<td>$fila[Propiedad]</td>";
+						echo "<td><a class='btn btn-warning' href='actuaciones.php?id=$fila[id]'>Contratos</a></td>";
+						echo "<td><a class='btn btn-danger' href='eliminar.php?id=$fila[id]'>Eliminar</a></td>";
 						echo "</tr>";
 					}
 					?>
