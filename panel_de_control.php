@@ -30,24 +30,19 @@ $resultado = $mysqli->query($sql);
 	<header>
 		
 	<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
-	<img src="images/logo.jpg" alt="grande" style="width: 35px;" class="align-self-left">
-  <h1 class="navbar-brand">Agrupacion Santa Maria Magdalena</h1>
+	<img src="images/logo.jpg" alt="grande" style="width: 45px;" class="align-self-left">
+  <h1><a class="nav-link" href="panel_de_control.php">Agrupacion Santa Maria Magdalena</h1></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-	  <a class="nav-link" href="panel_de_control.php">Inicio <span class="sr-only">(current)</span></a>
-      </li>
+    <ul class="navbar-nav mr-auto" >
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Acciones
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="registrar.php">Registrar</a>
-          <a class="dropdown-item" href="proximamente.php">Proximamente</a>
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Acciones</a>
+        <div class="dropdown-menu"  aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="registrar.php">Registrar nuevo musico</a>
+          <a class="dropdown-item" href="contratos.php">Actuaciones</a>
         </div>
       </li>
     </ul>

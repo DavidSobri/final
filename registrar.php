@@ -1,3 +1,13 @@
+<?php
+
+    require 'conexion.php';
+
+    $sql = "SELECT * FROM musico";
+
+    $resultado = $mysqli->query($sql);
+
+?>
+
 <!doctype html>
 <html lang="es">
 	<head>
@@ -42,21 +52,46 @@
 	<body>
 		<div class="container">
 			<div class="row">
-				<h1>Socios</h1>
+				<h1>Registrar musico</h1>
 			</div>
-			
+			<br><br>
 			<div class="row">
 				<div class="col-md-8">
 					<!-- Completar atributos de form -->
 					<form id="registro" name="registro" autocomplete="off" method="post" action="registrar2.php">
 						<div class="form-group">
-							<label>Nombre <input class="form-control" type="text" name="nombre" maxlength="50"></label>
+							<label>Nombre <input class="form-control" type="text" name="nombre" maxlength="50" required></label>
 						</div>
 
 						<div class="form-group">
-						<label>Fecha de inscripción <input class="form-control" type="date" name="fecha" value="2024-02-06"></label><br/>
+						<label>Apellido <input class="form-control" type="text" name="apellido" maxlength="50"></label><br/>
                         </div>
-						
+
+						<div class="form-group">
+						<label>Telefono <input class="form-control" type="number" name="telefono" min ="600000000" max="699999999"></label><br/>
+                        </div>
+
+						<div class="form-group">
+							<label>Grupo de cuerda</label><br>
+						<select name="cuerda">
+        				<?php
+						while($fila = $resultado->fetch_assoc()){
+						echo "<option>$fila[cuerda]</option>";
+						}
+
+						$mysqli->close();
+						?>
+        				</select>
+						</div>
+
+						<div class="form-group">
+							<label>Instrumento en propiedad</label><br>
+						<select name="propiedad">
+        					<option>Si</option>
+							<option>No</option>
+        				</select>
+                        </div>
+
 						<div class="form-group">
 							<input type="submit" value="Registrar" class="btn btn-primary">
 						</div>
