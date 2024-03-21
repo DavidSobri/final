@@ -39,3 +39,7 @@ thead{
 .titulo-ses{
     align-self: center;
 }
+
+.navbar{
+    background-color: black;
+}

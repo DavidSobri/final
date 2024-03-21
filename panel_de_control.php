@@ -29,7 +29,7 @@ $resultado = $mysqli->query($sql);
 
 	<header>
 		
-	<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+	<nav class="navbar navbar-expand-lg navbar black ">
 	<img src="images/logo.jpg" alt="grande" style="width: 45px;" class="align-self-left">
   <h1><a class="nav-link" href="panel_de_control.php">Agrupacion Santa Maria Magdalena</h1></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,7 +37,7 @@ $resultado = $mysqli->query($sql);
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto" >
+    <ul class="navbar-nav ml-auto" >
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Acciones</a>
         <div class="dropdown-menu"  aria-labelledby="navbarDropdown">
