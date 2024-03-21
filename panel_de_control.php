@@ -31,7 +31,7 @@ $resultado = $mysqli->query($sql);
 		
 	<nav class="navbar navbar-expand-lg navbar black ">
 	<img src="images/logo.jpg" alt="grande" style="width: 50px;" class="align-self-left">
-  <h1><a class="nav-link" href="panel_de_control.php">Agrupacion Santa Maria Magdalena</h1></a>
+  <h1><a class="nav-link" href="panel_de_control.php">Agrupación Santa Maria Magdalena</h1></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -62,6 +62,15 @@ $resultado = $mysqli->query($sql);
 		<div class="tabla alig-items-center " style="width:85%; margin: auto;">
 			<table id="tabla" class="table table-primary " style="width:100%">
 				<thead>
+				<tr class="table-black">
+						<th></th>
+						<th></th>
+						<th></th>
+						<th>Musicos en Lista</th>
+						<th></th>
+						<th></th>
+						<th></th>
+					</tr>
 					<tr class="table-primary">
 						<th>Nombre</th>
 						<th>Apellido</th>
