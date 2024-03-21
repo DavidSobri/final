@@ -25,12 +25,12 @@ $resultado = $mysqli->query($sql);
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.dataTables.min.js"></script>
 
-	<title>Agrupacion Santa Maria Magdalena</title>
+	<title>Agrupación Santa Maria Magdalena</title>
 
 	<header>
 		
 	<nav class="navbar navbar-expand-lg navbar black ">
-	<img src="images/logo.jpg" alt="grande" style="width: 45px;" class="align-self-left">
+	<img src="images/logo.jpg" alt="grande" style="width: 50px;" class="align-self-left">
   <h1><a class="nav-link" href="panel_de_control.php">Agrupacion Santa Maria Magdalena</h1></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>

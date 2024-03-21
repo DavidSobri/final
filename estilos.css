@@ -42,4 +42,9 @@ thead{
 
 .navbar{
     background-color: black;
+    margin-bottom: 1em;
+}
+
+a{
+    color: gold;
 }
