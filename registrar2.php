@@ -52,7 +52,7 @@
 
 
 	//se prepara la sentencia sql
-	$sql = "INSERT INTO usuarios (nombre, apellido, telefono, cuerda, Propiedad) VALUES ('$nombre','$apellido','$telefono','$cuerda','$propiedad')";
+	$sql = "INSERT INTO musico (nombre, apellido, telefono, cuerda, Propiedad) VALUES ('$nombre','$apellido','$telefono','$cuerda','$propiedad')";
 	//se ejecuta la sentencia y se gurada el resultado en resultado
 	$resultado = $mysqli->query($sql);
 

@@ -58,6 +58,7 @@
 				<div class="col-md-8">
 					<!-- Completar atributos de form -->
 					<form id="registro" name="registro" autocomplete="off" method="post" action="registrar2.php">
+						<br>
 						<div class="form-group">
 							<label>Nombre <input class="form-control" type="text" name="nombre" maxlength="50" required></label>
 						</div>
