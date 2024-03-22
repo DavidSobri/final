@@ -50,10 +50,12 @@
 
 	//Se prepara la sentencia sql
 	$sql = "DELETE FROM musico WHERE id=$id";
+	$sql2 = "DELETE FROM contratos WHERE id_contrato=$id";
 	//Se ejecuta la sentencia y se guarda el resultado en $resultado
 	$resultado = $mysqli->query($sql);
+	$resultado2 = $mysqli->query($sql2);
 
-	if ($resultado > 0) {
+	if ($resultado > 0 or  $resultado2 > 0) {
 		echo "<p class='alert alert-primary'>Registro eliminado</p>";
 	} else {
 		echo "<p <p class='alert alert-danger'>Ha habido un error</p>";
