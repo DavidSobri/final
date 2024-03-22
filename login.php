@@ -33,7 +33,7 @@ $usuario = $_POST['usuario'];
 $contraseña = $_POST['contraseña'];
 
 //se prepara y ejecuta la sentencia
-$sql = "SELECT * FROM usuarios where usuario='$usuario' and contraseña='$contraseña' LIMIT 1";
+$sql = "SELECT * FROM usuarios where usuario='$usuario' and contra='$contraseña' LIMIT 1";
 $resultado = $mysqli->query($sql);
 
 //se extrae el registro. no se hace en bucle porque el resultado debe ser unico
