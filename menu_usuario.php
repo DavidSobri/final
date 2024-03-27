@@ -1,10 +1,14 @@
 <?php
 require 'conexion.php';
-$sql = "SELECT * FROM musico order by cuerda";
-$resultado = $mysqli->query($sql);
+$id = $_GET['id'];
+//$id_contrato = $_GET['id_contrato'];
+$sql2 = "SELECT * FROM musico where id=$id";
+$resultado = $mysqli->query($sql2);
+$sql = "SELECT * FROM contratos WHERE id_contrato=$id_contrato";
+$resultado2 = $mysqli->query($sql);
 
+$fila2 = $resultado2->fetch_assoc();
 ?>
-
 <!doctype html>
 <html lang="es">
 
@@ -54,49 +58,45 @@ $resultado = $mysqli->query($sql);
 </head>
 
 <body>
-	<div class="container-fluid ">
-		<!-- <div class="row">
-			<a class='btn btn-primary' href='registrar.php'>Registrar</a>
-		</div> -->
-		<div class="d-flex justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-center justify-content-xl-center" style="width:100%">
+	<div class="d-flex flex-column ">
+		<h1 class="align-self-center align-self-xl-center align-self-lg-center align-self-md-center align-self-sm-center">Menu de <?php echo $fila2['nombre']; echo $fila2['apellido']; ?></h1>
+	</div>
+	<div class="d-flex justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-center justify-content-xl-center" style="width:100%">
 		<div class="tabla alig-items-center " style="width:85%; margin: auto;">
 			<table id="tabla" class="table table-primary " style="width:100%">
 				<thead>
-				<tr class="table-black">
-						<th></th>
-						<th></th>
-						<th></th>
-						<th>Musicos en Lista</th>
-						<th></th>
-						<th></th>
-						<th></th>
-					</tr>
 					<tr class="table-primary">
-						<th>Nombre</th>
-						<th>Apellido</th>
-						<th>Telefono</th>
-						<th>Cuerda</th>
-						<th>Instrumento Propio</th>
-						<th></th>
-						<th></th>
+						<th>Fecha</th>
+						<th>Hora de entrada</th>
+						<th>Hora de salida</th>
 					</tr>
 				</thead>
 				<tbody>
 					<?php
 					while ($fila = $resultado->fetch_assoc()) {
-						echo "<tr class='table'>";
-						echo "<td>$fila[nombre]</td>";
-						echo "<td>$fila[apellido]</td>";
-						echo "<td>$fila[telefono]</td>";
-						echo "<td>$fila[cuerda]</td>";
-						echo "<td>$fila[Propiedad]</td>";
-						echo "<td><a class='btn btn-warning' href='actuaciones.php?id=$fila[id]'>Contratos</a></td>";
-						echo "<td><a class='btn btn-danger' href='eliminar.php?id=$fila[id]'>Eliminar</a></td>";
+						echo "<tr>";
+						echo "<td>$fila[Fecha]</td>";
+						echo "<td>$fila[Hora_de_entrada]</td>";
+						echo "<td>$fila[Hora_de_salida]</td>";
+
+
 						echo "</tr>";
 					}
+
+					echo "";
 					?>
 				</tbody>
 			</table>
+			<?php
+			echo "<a class='btn btn-primary' href='panel_de_control.php'>Volver</a>";
+			echo "<a class='btn btn-danger' href='añadir_sesion.php?id=$id'>Añadir</a>";
+
+			?>
+		</div>
+	</div>
+
+
+</body>
 		</div>
 
 
