@@ -4,10 +4,11 @@ $id = $_GET['id'];
 //$id_contrato = $_GET['id_contrato'];
 $sql2 = "SELECT * FROM musico where id=$id";
 $resultado = $mysqli->query($sql2);
-$sql = "SELECT * FROM contratos WHERE id_contrato=$id_contrato";
+$sql = "SELECT id_contrato FROM asiste WHERE id_musico=$id";
 $resultado2 = $mysqli->query($sql);
 
-$fila2 = $resultado2->fetch_assoc();
+$fila = $resultado->fetch_assoc();
+
 ?>
 <!doctype html>
 <html lang="es">
@@ -32,58 +33,68 @@ $fila2 = $resultado2->fetch_assoc();
 	<title>Agrupación Santa Maria Magdalena</title>
 
 	<header>
-		
-	<nav class="navbar navbar-expand-lg navbar black ">
-	<img src="images/logo.jpg" alt="grande" style="width: 50px;" class="align-self-left">
-  <h1><a class="nav-link" href="panel_de_control.php">Agrupación Santa Maria Magdalena</h1></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav ml-auto" >
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Acciones</a>
-        <div class="dropdown-menu"  aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="registrar.php">Registrar nuevo musico</a>
-          <a class="dropdown-item" href="contratos.php">Actuaciones</a>
-        </div>
-      </li>
-    </ul>
-	<a href="index.php" class="form-inline my-2 my-lg-0 nav-link">Cerrar Sesion</a>
-  </div>
-</nav>
+		<nav class="navbar navbar-expand-lg navbar black ">
+			<img src="images/logo.jpg" alt="grande" style="width: 50px;" class="align-self-left">
+			<h1><a class="nav-link" href="panel_de_control.php">Agrupación Santa Maria Magdalena</h1></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Acciones</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="datos.php?id=<?php echo $id ?>">Mis datos</a>
+							<a class="dropdown-item" href="contratos2.php?id=<?php echo $id ?>">Actuaciones</a>
+						</div>
+					</li>
+				</ul>
+				<a href="index.php" class="form-inline my-2 my-lg-0 nav-link">Cerrar Sesion</a>
+			</div>
+		</nav>
 	</header>
 
 </head>
 
 <body>
 	<div class="d-flex flex-column ">
-		<h1 class="align-self-center align-self-xl-center align-self-lg-center align-self-md-center align-self-sm-center">Menu de <?php echo $fila2['nombre']; echo $fila2['apellido']; ?></h1>
+		<h1
+			class="align-self-center align-self-xl-center align-self-lg-center align-self-md-center align-self-sm-center">
+			Contratos de
+			<?php echo $fila['nombre']; ?>
+			<?php echo $fila['apellido']; ?>
+		</h1>
 	</div>
-	<div class="d-flex justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-center justify-content-xl-center" style="width:100%">
+	<div class="d-flex justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-center justify-content-xl-center"
+		style="width:100%">
 		<div class="tabla alig-items-center " style="width:85%; margin: auto;">
 			<table id="tabla" class="table table-primary " style="width:100%">
 				<thead>
 					<tr class="table-primary">
+						<th>Contrato</th>
 						<th>Fecha</th>
-						<th>Hora de entrada</th>
-						<th>Hora de salida</th>
 					</tr>
 				</thead>
 				<tbody>
 					<?php
-					while ($fila = $resultado->fetch_assoc()) {
+					while ($fila2 = $resultado2->fetch_assoc()) {
+						$sql3 = "SELECT * from contratos where id_contrato=$fila2[id_contrato]";
+						$resultado3 = $mysqli->query($sql3);
+						$fila3 = $resultado3->fetch_assoc();
 						echo "<tr>";
-						echo "<td>$fila[Fecha]</td>";
-						echo "<td>$fila[Hora_de_entrada]</td>";
-						echo "<td>$fila[Hora_de_salida]</td>";
+						echo "<td>$fila3[contrato]</td>";
+						echo "<td>$fila3[fecha]</td>";
 
 
 						echo "</tr>";
 					}
 
 					echo "";
+
 					?>
 				</tbody>
 			</table>
@@ -97,7 +108,7 @@ $fila2 = $resultado2->fetch_assoc();
 
 
 </body>
-		</div>
+</div>
 
 
 

@@ -42,7 +42,12 @@ if ($fila){
 	if($usuario == "david"){
 		header("location: panel_de_control.php");
 	}else{
-		header("location: menu_usuario.php");
+		echo "<div class='d-flex justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-center justify-content-xl-center' style='width:100%'>";
+    echo "<h3>Bienvenida $usuario</h3><br>";
+    echo "</div>";
+    echo "<div class='d-flex justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-center justify-content-xl-center' style='width:100%'>";
+    echo "<p><p><a href='menu_usuario.php?id=$fila[id]' class='btn btn-primary'>Ir al inicio</a></p>";
+    echo "</div>";
 	}
 
 }else{
