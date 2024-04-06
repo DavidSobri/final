@@ -1,7 +1,7 @@
 <?php
 
     require 'conexion.php';
-
+//pillo los datos de la tabla para luego  mostrarlos en el select
     $sql = "SELECT * FROM musico";
 
     $resultado = $mysqli->query($sql);
@@ -19,7 +19,7 @@
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="estiloregistrar.css">
 		<link rel="stylesheet" href="estilos.css">
-		<link rel="shortcut icon" href="images/icono.png">
+		<link rel="shortcut icon" href="images/logo.jpg">
 		
 		<title>Agrupación Santa Maria Magdalena</title>
 
@@ -39,6 +39,7 @@
 	<div class="dropdown-menu"  aria-labelledby="navbarDropdown">
 	  <a class="dropdown-item" href="registrar.php">Registrar nuevo musico</a>
 	  <a class="dropdown-item" href="contratos.php">Actuaciones</a>
+	  <a class="dropdown-item" href="prestados.php">Intrumentos</a>
 	</div>
   </li>
 </ul>
