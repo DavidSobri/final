@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 
 	<link rel="stylesheet" href="estilos.css">
-	<link rel="shortcut icon" href="images/icono.png">
+	<link rel="shortcut icon" href="images/logo.jpg">
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -28,6 +28,7 @@
 </head>
 <body>
 <?php
+//establezco conexion y pillo los datos del formulario de index
 require 'conexion.php';
 $usuario = $_POST['usuario'];
 $contraseña = $_POST['contraseña'];
@@ -39,9 +40,11 @@ $resultado = $mysqli->query($sql);
 //se extrae el registro. no se hace en bucle porque el resultado debe ser unico
 $fila = $resultado->fetch_assoc();
 if ($fila){
+	//si el usuario es el de david(el cual es director) ira al panel de control, el cual tiene  mas privilegios que otros usuarios
 	if($usuario == "david"){
 		header("location: panel_de_control.php");
 	}else{
+		//sino pillara los datos del usuario y guardara su id para pasarla al menu del respectivo usuario
 		echo "<div class='d-flex justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-center justify-content-xl-center' style='width:100%'>";
     echo "<h3>Bienvenida $usuario</h3><br>";
     echo "</div>";
@@ -51,6 +54,7 @@ if ($fila){
 	}
 
 }else{
+	//si no coincide contraseña y usuario  muestra mensaje de error y vuelve a mostrar el login-index
     echo "<div class='d-flex justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-center justify-content-xl-center' style='width:100%'>";
     echo "<h3>Usuario o contraseña incorrectos.</h3>";
     echo "</div>";
