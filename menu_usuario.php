@@ -36,7 +36,7 @@ $fila = $resultado->fetch_assoc();
 
 		<nav class="navbar navbar-expand-lg navbar black ">
 			<img src="images/logo.jpg" alt="grande" style="width: 50px;" class="align-self-left">
-			<h1><a class="nav-link" href="panel_de_control.php">Agrupación Santa Maria Magdalena</h1></a>
+			<h1><a class="nav-link" href="menu_usuario.php?id=<?php echo $id ?>">Agrupación Santa Maria Magdalena</h1></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -61,21 +61,18 @@ $fila = $resultado->fetch_assoc();
 </head>
 
 <body>
-	<div class="d-flex flex-column ">
-		<h1
-			class="align-self-center align-self-xl-center align-self-lg-center align-self-md-center align-self-sm-center">
-			Contratos de
-			<?php echo $fila['nombre']; ?>
-			<?php echo $fila['apellido']; ?>
-		</h1>
-	</div>
 	<div class="d-flex justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-center justify-content-xl-center"
 		style="width:100%">
 		<div class="tabla alig-items-center " style="width:85%; margin: auto;">
 			<table id="tabla" class="table table-primary " style="width:100%">
 				<thead>
+					<tr class="table-black">
+						<th><?php echo $fila['nombre'], "  " ,$fila['apellido']; ?></th>
+						<th></th>
+					</tr>
+
 					<tr class="table-primary">
-						<th>Contrato</th>
+						<th>Contrato aceptados</th>
 						<th>Fecha</th>
 					</tr>
 				</thead>
@@ -98,11 +95,6 @@ $fila = $resultado->fetch_assoc();
 					?>
 				</tbody>
 			</table>
-			<?php
-			echo "<a class='btn btn-primary' href='panel_de_control.php'>Volver</a>";
-			echo "<a class='btn btn-danger' href='añadir_sesion.php?id=$id'>Añadir</a>";
-
-			?>
 		</div>
 	</div>
 

@@ -21,7 +21,7 @@ $fila2 = $resultado2->fetch_assoc();
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="estiloregistrar.css">
     <link rel="stylesheet" href="estilos.css">
-    <link rel="shortcut icon" href="images/icono.png">
+    <link rel="shortcut icon" href="images/logo.jpg">
 
     <title>Agrupación Santa Maria Magdalena</title>
 
