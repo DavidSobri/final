@@ -8,10 +8,62 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/jquery.dataTables.min.css">
 	<link rel="stylesheet" href="login.css">
-	<link rel="shortcut icon" href="images/icono.png">
+	<link rel="shortcut icon" href="images/logo.jpg">
 	
 	<title>Agrupacion Santa Maria Magdalena</title>
 </head>
+<style>
+    body {
+      /* Establece el tamaño mínimo del cuerpo */
+      min-height: 100vh;
+      /* Asegura que el fondo del cuerpo sea transparente */
+      background: transparent;
+    }
+    .carousel {
+      /* Establece el carrusel como posición absoluta */
+      position: absolute;
+      /* Establece el tamaño del carrusel para ocupar toda la pantalla */
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      /* Asegura que el carrusel esté detrás de otros elementos */
+      z-index: -1;
+    }
+    .carousel-inner {
+      /* Establece el tamaño de la diapositiva del carrusel */
+      width: 100%;
+      height: 100%;
+    }
+    .carousel-item {
+      /* Establece el tamaño de la imagen de la diapositiva */
+      width: 100%;
+      height: 100%;
+      /* Asegura que la imagen ocupe todo el espacio disponible */
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="5000">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/todos4.jpg" class="d-block w-100" alt="Slide 1">
+    </div>
+    <div class="carousel-item">
+      <img src="images/todos2.jpg" class="d-block w-100" alt="Slide 2">
+    </div>
+    <div class="carousel-item">
+      <img src="images/todos3.jpg" class="d-block w-100" alt="Slide 3">
+    </div>
+  </div>
+</div>
+
+<!-- Incluye la biblioteca de Bootstrap JS (jQuery requerido) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 <body>
 
@@ -23,7 +75,6 @@
 			<input type="password" class="input" placeholder="Contraseña" name="contraseña" required>
 			<button type="submit" class="button">Iniciar sesión</button>
 		</form>
-		
         </div>
 	</div>
 </body>
