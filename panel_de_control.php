@@ -1,4 +1,5 @@
 <?php
+//pillo los datos de la tabla ordenados
 require 'conexion.php';
 $sql = "SELECT * FROM musico order by cuerda";
 $resultado = $mysqli->query($sql);
@@ -43,6 +44,7 @@ $resultado = $mysqli->query($sql);
         <div class="dropdown-menu"  aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="registrar.php">Registrar nuevo musico</a>
           <a class="dropdown-item" href="contratos.php">Actuaciones</a>
+		  <a class="dropdown-item" href="prestados.php">Intrumentos</a>
         </div>
       </li>
     </ul>
@@ -69,7 +71,7 @@ $resultado = $mysqli->query($sql);
 						<th>Musicos en Lista</th>
 						<th></th>
 						<th></th>
-						<th></th>
+						
 					</tr>
 					<tr class="table-primary">
 						<th>Nombre</th>
@@ -78,11 +80,12 @@ $resultado = $mysqli->query($sql);
 						<th>Cuerda</th>
 						<th>Instrumento Propio</th>
 						<th></th>
-						<th></th>
+						
 					</tr>
 				</thead>
 				<tbody>
 					<?php
+					//recorre e imprime los datos
 					while ($fila = $resultado->fetch_assoc()) {
 						echo "<tr class='table'>";
 						echo "<td>$fila[nombre]</td>";
@@ -90,7 +93,6 @@ $resultado = $mysqli->query($sql);
 						echo "<td>$fila[telefono]</td>";
 						echo "<td>$fila[cuerda]</td>";
 						echo "<td>$fila[Propiedad]</td>";
-						echo "<td><a class='btn btn-warning' href='actuaciones.php?id=$fila[id]'>Contratos</a></td>";
 						echo "<td><a class='btn btn-danger' href='eliminar.php?id=$fila[id]'>Eliminar</a></td>";
 						echo "</tr>";
 					}

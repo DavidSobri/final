@@ -1,7 +1,7 @@
 <?php
 
 require 'conexion.php';
-
+//pillo quienes no tienen el instrumento en propiedad
 $sql = "SELECT * FROM musico where Propiedad like 'No'";
 $resultado = $mysqli->query($sql);
 
@@ -22,7 +22,7 @@ $resultado = $mysqli->query($sql);
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="estiloregistrar.css">
     <link rel="stylesheet" href="estilos.css">
-    <link rel="shortcut icon" href="images/icono.png">
+    <link rel="shortcut icon" href="images/logo.jpg">
 
     <title>Agrupación Santa Maria Magdalena</title>
 
@@ -67,17 +67,17 @@ $resultado = $mysqli->query($sql);
 				<tr class="table-black">
 						<th></th>
 						<th></th>
-						<th></th>
 						<th>Musicos en Lista</th>
+						<th></th>
 						<th></th>
 
 					</tr>
 					<tr class="table-primary">
+						<th>Id Instrumento</th>
 						<th>Nombre</th>
 						<th>Apellido</th>
 						<th>Telefono</th>
 						<th>Cuerda</th>
-						<th>Id Instrumento</th>
 
 					</tr>
 				</thead>
@@ -85,14 +85,15 @@ $resultado = $mysqli->query($sql);
 					<?php
 					while ($fila = $resultado->fetch_assoc()) {
 						echo "<tr class='table'>";
-						echo "<td>$fila[nombre]</td>";
-						echo "<td>$fila[apellido]</td>";
-						echo "<td>$fila[telefono]</td>";
-						echo "<td>$fila[cuerda]</td>";
+						//consulta para relacionar el id del musico junto al del instrumentos 
                         $sql2 = "SELECT id_instrumento from intrumento where id_musico=$fila[id]";
 						$resultado2 = $mysqli->query($sql2);
 						$fila2 = $resultado2->fetch_assoc();
                         echo "<td>$fila2[id_instrumento]</td>";
+						echo "<td>$fila[nombre]</td>";
+						echo "<td>$fila[apellido]</td>";
+						echo "<td>$fila[telefono]</td>";
+						echo "<td>$fila[cuerda]</td>";
 						echo "</tr>";
 					}
 					?>
