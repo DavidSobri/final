@@ -38,7 +38,6 @@ $fila2=$resultado2->fetch_assoc();
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent" style="justify-content:end">
-            <a href="contratos2.php" class="form-inline my-2 my-lg-0 nav-link">Actuaciones</a>
             <a href="index.php" class="form-inline my-2 my-lg-0 nav-link">Cerrar Sesion</a>
             </div>
         </nav>
@@ -61,7 +60,7 @@ $fila2=$resultado2->fetch_assoc();
     $sql = "UPDATE musico SET nombre='$nombre', apellido='$apellido' , telefono='$telefono'  WHERE id=$id";
     //se ejecuta la sentencia y se gurada el resultado en resultado
     $resultado = $mysqli -> query($sql);
-    
+
 	if ($resultado > 0) {
 		echo "<div class='d-flex justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-center justify-content-xl-center' style='width:100%'>";
     echo "<h3>Datos modificados correctamente</h3><br>";

@@ -38,7 +38,6 @@ $fila2=$resultado2->fetch_assoc();
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent" style="justify-content:end">
-            <a href="contratos2.php" class="form-inline my-2 my-lg-0 nav-link">Actuaciones</a>
             <a href="index.php" class="form-inline my-2 my-lg-0 nav-link">Cerrar Sesion</a>
             </div>
         </nav>

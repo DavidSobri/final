@@ -23,7 +23,7 @@ $resultado = $mysqli->query($sql);
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="estiloregistrar.css">
     <link rel="stylesheet" href="estilos.css">
-    <link rel="shortcut icon" href="images/icono.png">
+    <link rel="shortcut icon" href="images/logo.jpg">
 
     <title>Agrupación Santa Maria Magdalena</title>
 
@@ -31,23 +31,13 @@ $resultado = $mysqli->query($sql);
 
         <nav class="navbar navbar-expand-lg navbar black ">
             <img src="images/logo.jpg" alt="grande" style="width: 50px;" class="align-self-left">
-            <h1><a class="nav-link" href="panel_de_control.php">Agrupación Santa Maria Magdalena</h1></a>
+            <h1><a class="nav-link" href='menu_usuario.php?id=<?php echo $id ?>'>Agrupación Santa Maria Magdalena</h1></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Acciones</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="registrar.php">Registrar nuevo musico</a>
-                            <a class="dropdown-item" href="contratos.php">Actuaciones</a>
-                        </div>
-                    </li>
-                </ul>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="justify-content:end">
                 <a href="index.php" class="form-inline my-2 my-lg-0 nav-link">Cerrar Sesion</a>
             </div>
         </nav>
@@ -57,16 +47,13 @@ $resultado = $mysqli->query($sql);
 
 <body>
     <div class="container">
-        <div class="row" style="justify-content: center;">
-            <h1>Registrar musico</h1>
-        </div>
         <br><br>
         <div class="card">
             <div class="col-md-8">
                 <!-- Completar atributos de form -->
                 <form id="registro" name="registro" autocomplete="off" method="post" action="aceptar2.php">
                     <br>
-                       <p>Nombre: <input type="text" readonly value="<?php echo $fila2['nombre']; ?>" name="nombre"></p>
+                       <p><?php echo $fila2['nombre'] ?> va aceptar el siguiente contrato</p>
 
                     <div class="form-group">
                         <label>Contrato</label>
