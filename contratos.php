@@ -1,6 +1,7 @@
 <?php
 require 'conexion.php';
-$sql = "SELECT * FROM contratos";
+//pillo todo de los contratos ordenados
+$sql = "SELECT * FROM contratos order by fecha";
 $resultado = $mysqli->query($sql);
 
 ?>
@@ -16,7 +17,7 @@ $resultado = $mysqli->query($sql);
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="estiloregistrar.css">
 		<link rel="stylesheet" href="estilos.css">
-		<link rel="shortcut icon" href="images/icono.png">
+		<link rel="shortcut icon" href="images/logo.jpg">
 		
 		<title>Agrupación Santa Maria Magdalena</title>
 
@@ -36,6 +37,7 @@ $resultado = $mysqli->query($sql);
 	<div class="dropdown-menu"  aria-labelledby="navbarDropdown">
 	  <a class="dropdown-item" href="registrar.php">Registrar nuevo musico</a>
 	  <a class="dropdown-item" href="contratos.php">Actuaciones</a>
+	  <a class="dropdown-item" href="prestados.php">Intrumentos</a>
 	</div>
   </li>
 </ul>
@@ -58,18 +60,19 @@ $resultado = $mysqli->query($sql);
 						<th></th>
 						<th>Proximas Actuaciones</th>
 						<th></th>
-						<th></th>
+						
 					</tr>
 					<tr class="table-primary">
 						<th>Contrato</th>
 						<th>Fecha</th>
 						<th></th>
-						<th></th>
+						
 					</tr>
 				</thead>
 				<tbody>
 					<?php
 					while ($fila = $resultado->fetch_assoc()) {
+						//los imprime todos y el enlace pasa la id para ese especifico eliminar
 						echo "<tr class='table'>";
 						echo "<td>$fila[contrato]</td>";
 						echo "<td>$fila[fecha]</td>";
