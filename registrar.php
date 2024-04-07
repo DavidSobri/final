@@ -1,10 +1,10 @@
 <?php
 
-    require 'conexion.php';
+ //   require 'conexion.php';
 //pillo los datos de la tabla para luego  mostrarlos en el select
-    $sql = "SELECT * FROM musico";
+   /// $sql = "SELECT * FROM musico";
 
-    $resultado = $mysqli->query($sql);
+   // $resultado = $mysqli->query($sql);
 
 ?>
 
