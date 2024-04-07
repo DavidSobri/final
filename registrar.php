@@ -75,13 +75,17 @@
 						<div class="form-group">
 							<label>Grupo de cuerda</label><br>
 						<select name="cuerda">
-        				<?php
-						while($fila = $resultado->fetch_assoc()){
-						echo "<option>$fila[cuerda]</option>";
-						}
-
-						$mysqli->close();
-						?>
+        				//<?php
+						//while($fila = $resultado->fetch_assoc()){
+						//echo "<option>$fila[cuerda]</option>";
+						//}
+//
+						//$mysqli->close();
+						//?>
+							<option>Bajo</option>
+							<option>Corneta</option>
+							<option>Percusión</option>
+							<option>Trompeta</option>
         				</select>
 						</div>
 
