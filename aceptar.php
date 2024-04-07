@@ -54,7 +54,8 @@ $resultado = $mysqli->query($sql);
                 <form id="registro" name="registro" autocomplete="off" method="post" action="aceptar2.php">
                     <br>
                        <p><?php echo $fila2['nombre'] ?> va aceptar el siguiente contrato</p>
-
+                       <p><input type="hidden" value="<?php echo $fila2['nombre']; ?>" name="nombre"></p>
+                        <label type="hidden" <?php echo $fila2['nombre'] ?> ></label>
                     <div class="form-group">
                         <label>Contrato</label>
                         <select name="contrato">
