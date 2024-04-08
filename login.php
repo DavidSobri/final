@@ -46,7 +46,7 @@ if ($fila){
 	}else{
 		//sino pillara los datos del usuario y guardara su id para pasarla al menu del respectivo usuario
 		echo "<div class='d-flex justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-center justify-content-xl-center' style='width:100%'>";
-    echo "<h3>Bienvenida $usuario</h3><br>";
+    echo "<h3>Bienvenid@ $usuario</h3><br>";
     echo "</div>";
     echo "<div class='d-flex justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-center justify-content-xl-center' style='width:100%'>";
     echo "<p><p><a href='menu_usuario.php?id=$fila[id]' class='btn btn-primary'>Ir al inicio</a></p>";
