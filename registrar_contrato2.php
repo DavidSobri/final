@@ -54,7 +54,7 @@
 	$resultado = $mysqli->query($sql);
 
 	if ($resultado > 0) {
-		header("location: panel_de_control.php");
+		header("location: contratos.php");
 	} else {
 		echo "<p class='alert alert-danger'>Ha habido un error</p>";
 	}
