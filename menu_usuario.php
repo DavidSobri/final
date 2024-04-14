@@ -32,31 +32,43 @@ $fila = $resultado->fetch_assoc();
 
 	<title>Agrupación Santa Maria Magdalena</title>
 
-	<header>
+	<style>
+  /* Estilo para el menú desplegable en pantallas pequeñas */
+  @media (max-width: 576px) {
+    .navbar-black .dropdown-menu {
+      background-color: grey; /* Color de fondo del menú desplegable */
+    }
+  }
+</style>
+</head>
+<body>
 
-		<nav class="navbar navbar-expand-lg navbar black ">
-			<img src="images/logo.png" alt="grande" style="width: 50px;" class="align-self-left">
-			<h1><a class="nav-link" href="menu_usuario.php?id=<?php echo $id ?>">Agrupación Santa Maria Magdalena</h1></a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-black">
+    <img src="images/logo.png" alt="grande" style="width: 50px;" class="align-self-left">
+    <a class="nav-link" href="menu_usuario.php?id=<?php echo $id ?>">Agrupación Santa Maria Magdalena</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="background-color: grey;">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Acciones</a>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="datos.php?id=<?php echo $id ?>">Mis datos</a>
-							<a class="dropdown-item" href="contratos2.php?id=<?php echo $id ?>">Actuaciones</a>
-						</div>
-					</li>
-				</ul>
-				<a href="index.php" class="form-inline my-2 my-lg-0 nav-link">Cerrar Sesion</a>
-			</div>
-		</nav>
-	</header>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Acciones</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="datos.php?id=<?php echo $id ?>">Mis datos</a>
+            <a class="dropdown-item" href="contratos2.php?id=<?php echo $id ?>">Actuaciones</a>
+          </div>
+        </li>
+      <li>
+      <a href="index.php" class="form-inline my-2 my-lg-0 nav-link">Cerrar Sesión</a>
+		</li>
+      </ul>
+    </div>
+  </nav>
+</header>
 
 </head>
 

@@ -31,12 +31,7 @@ $fila2=$resultado2->fetch_assoc();
 
         <nav class="navbar navbar-expand-lg navbar black ">
             <img src="images/logo.png" alt="grande" style="width: 50px;" class="align-self-left">
-            <h1><a class="nav-link" href="menu_usuario.php?id=<?php echo $id ?>">Agrupación Santa Maria Magdalena</h1></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
+            <a class="nav-link" href="menu_usuario.php?id=<?php echo $id ?>">Agrupación Santa Maria Magdalena</a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent" style="justify-content:end">
             <a href="index.php" class="form-inline my-2 my-lg-0 nav-link">Cerrar Sesion</a>
             </div>
