@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 
 	<link rel="stylesheet" href="estilos.css">
-	<link rel="shortcut icon" href="images/logo.jpg">
+	<link rel="shortcut icon" href="images/logo.png">
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->

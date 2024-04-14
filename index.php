@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/jquery.dataTables.min.css">
 	<link rel="stylesheet" href="login.css">
-	<link rel="shortcut icon" href="images/logo.jpg">
+	<link rel="shortcut icon" href="images/logo.png">
 	
 	<title>Agrupacion Santa Maria Magdalena</title>
 </head>

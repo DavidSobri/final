@@ -22,7 +22,7 @@ $fila = $resultado->fetch_assoc();
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/jquery.dataTables.min.css">
 	<link rel="stylesheet" href="estilos.css">
-	<link rel="shortcut icon" href="images/logo.jpg">
+	<link rel="shortcut icon" href="images/logo.png">
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -35,7 +35,7 @@ $fila = $resultado->fetch_assoc();
 	<header>
 
 		<nav class="navbar navbar-expand-lg navbar black ">
-			<img src="images/logo.jpg" alt="grande" style="width: 50px;" class="align-self-left">
+			<img src="images/logo.png" alt="grande" style="width: 50px;" class="align-self-left">
 			<h1><a class="nav-link" href="menu_usuario.php?id=<?php echo $id ?>">Agrupación Santa Maria Magdalena</h1></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

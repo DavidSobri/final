@@ -19,14 +19,14 @@
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="estiloregistrar.css">
 		<link rel="stylesheet" href="estilos.css">
-		<link rel="shortcut icon" href="images/logo.jpg">
+		<link rel="shortcut icon" href="images/logo.png">
 		
 		<title>Agrupación Santa Maria Magdalena</title>
 
 <header>
 	
 <nav class="navbar navbar-expand-lg navbar black ">
-<img src="images/logo.jpg" alt="grande" style="width: 50px;" class="align-self-left">
+<img src="images/logo.png" alt="grande" style="width: 50px;" class="align-self-left">
 <h1><a class="nav-link" href="panel_de_control.php">Agrupación Santa Maria Magdalena</h1></a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 <span class="navbar-toggler-icon"></span>
