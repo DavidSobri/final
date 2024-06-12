@@ -41,7 +41,7 @@ $resultado = $mysqli->query($sql);
 $fila = $resultado->fetch_assoc();
 if ($fila){
 	//si el usuario es el de david(el cual es director) ira al panel de control, el cual tiene  mas privilegios que otros usuarios
-	if($usuario == "david"){
+	if($fila['categoria'] == "admin"){
 		header("location: panel_de_control.php");
 	}else{
 		//sino pillara los datos del usuario y guardara su id para pasarla al menu del respectivo usuario

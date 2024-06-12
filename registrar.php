@@ -66,7 +66,7 @@
 	<body>
 		<div class="container">
 			<div class="row" style="justify-content: center;">
-				<h1>Registrar musico</h1>
+				<h1>Registrando nuevo músico</h1>
 			</div>
 			<br><br>
 			<div class="card">
