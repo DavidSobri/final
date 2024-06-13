@@ -13,45 +13,29 @@
 	<title>Agrupacion Santa Maria Magdalena</title>
 </head>
 <style>
-    body {
-      /* Establece el tamaño mínimo del cuerpo */
-      min-height: 100vh;
-      /* Asegura que el fondo del cuerpo sea transparente */
-      background: transparent;
-    }
-    .carousel {
-      /* Establece el carrusel como posición absoluta */
-      position: absolute;
-      /* Establece el tamaño del carrusel para ocupar toda la pantalla */
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      /* Asegura que el carrusel esté detrás de otros elementos */
-      z-index: -1;
-    }
-    .carousel-inner {
-      /* Establece el tamaño de la diapositiva del carrusel */
-      width: 100%;
-      height: 100%;
-    }
-    .carousel-item {
-      /* Establece el tamaño de la imagen de la diapositiva */
-      width: 100%;
-      height: 100%;
-      /* Asegura que la imagen ocupe todo el espacio disponible */
-      object-fit: cover;
-    }
+ body {
+  position: relative; /* Add this */
+  min-height: 100vh;
+  background: transparent;
+}
+
+.carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  margin-bottom: 20px; /* Add this to create some space */
+}
   </style>
 </head>
 <body>
 
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="5000">
   <div class="carousel-inner">
+    
     <div class="carousel-item active">
-      <img src="images/todos4.jpg" class="d-block w-100" alt="Slide 1">
-    </div>
-    <div class="carousel-item">
       <img src="images/todos2.jpg" class="d-block w-100" alt="Slide 2">
     </div>
     <div class="carousel-item">
