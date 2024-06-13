@@ -28,6 +28,14 @@
   @media (max-width: 576px) { /* Cuando el ancho de la pantalla sea menor o igual a 576px (pantallas pequeñas) */
     .navbar-black .dropdown-menu {
       background-color: grey; /* Color de fondo del menú desplegable */
+
+	  .card-translucent {
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo negro con transparencia del 80% */
+            color: white; /* Asegurar que el texto sea legible sobre fondo oscuro */
+        }
+        .form-control-wide {
+            width: 100%; /* Hacer que los input ocupen todo el ancho disponible */
+        }
     }}
     
 </style>
@@ -65,58 +73,64 @@
 </head>
 	<body>
 		<div class="container">
-			<div class="row" style="justify-content: center;">
-				<h1>Registrando nuevo músico</h1>
-			</div>
-			<br><br>
-			<div class="card">
-				<div class="col-md-8">
-					<!-- Completar atributos de form -->
-					<form id="registro" name="registro" autocomplete="off" method="post" action="registrar2.php">
-						<br>
-						<div class="form-group">
-							<label>Nombre <input class="form-control" type="text" name="nombre" maxlength="50" required></label>
-						</div>
-
-						<div class="form-group">
-						<label>Apellido <input class="form-control" type="text" name="apellido" maxlength="50" required></label><br/>
-                        </div>
-
-						<div class="form-group">
-						<label>Telefono <input class="form-control" type="number" name="telefono" min="600000000" max="699999999" required></label><br/>
-                        </div>
-
-						<div class="form-group">
-							<label>Grupo de cuerda</label><br>
-						<select name="cuerda">
-        				//<?php
-						//while($fila = $resultado->fetch_assoc()){
-						//echo "<option>$fila[cuerda]</option>";
-						//}
-//
-						//$mysqli->close();
-						//?>
-							<option>Bajo</option>
-							<option>Corneta</option>
-							<option>Percusión</option>
-							<option>Trompeta</option>
-        				</select>
-						</div>
-
-						<div class="form-group">
-							<label>Instrumento en propiedad</label><br>
-						<select name="propiedad">
-        					<option>Si</option>
-							<option>No</option>
-        				</select>
-                        </div>
-						<br>
-						<div class="form-group">
-							<input type="submit" value="Registrar" class="btn btn-warning">
-						</div>
-					</form>
-				</div>
-			</div>
+			
+			<div class="card card-translucent">
+				<div class="card-body">
+					<div class="col-md-8 mx-auto">
+						<div class="row justify-content-center">
+						<h1 class="text-center">Registrando nuevo músico</h1>
+					</div>
+                <!-- Completar atributos de form -->
+                <form id="registro" name="registro" autocomplete="off" method="post" action="registrar2.php">
+                    <br>
+                    <div class="form-group">
+                        <label>Nombre</label>
+                        <input class="form-control form-control-wide" type="text" name="nombre" maxlength="50" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Apellido</label>
+                        <input class="form-control form-control-wide" type="text" name="apellido" maxlength="50" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Teléfono</label>
+                        <input class="form-control form-control-wide" type="number" name="telefono" min="600000000" max="699999999" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Grupo de cuerda</label>
+                        <select class="form-control form-control-wide" name="cuerda">
+                            <!--
+                            <?php
+                            // while($fila = $resultado->fetch_assoc()){
+                            // echo "<option>$fila[cuerda]</option>";
+                            // }
+                            // $mysqli->close();
+                            ?>
+                            -->
+                            <option>Bajo</option>
+                            <option>Corneta</option>
+                            <option>Percusión</option>
+                            <option>Trompeta</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Instrumento en propiedad</label>
+                        <select class="form-control form-control-wide" name="propiedad">
+                            <option>Si</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="submit" value="Registrar" class="btn btn-warning btn-block">
+                    </div>
+                </form>
+                <br>
+                <div class="row justify-content-center">
+                    <a href="panel_de_control.php" class="btn btn-secondary btn-block col-md-4">Volver</a>
+                </div>
+            </div>
+        </div>
+    </div>
 		</div>
 		
 		<!-- Optional JavaScript -->

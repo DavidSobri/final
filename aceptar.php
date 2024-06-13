@@ -26,7 +26,21 @@ $resultado = $mysqli->query($sql);
     <link rel="shortcut icon" href="images/logo.png">
 
     <title>Agrupación Santa Maria Magdalena</title>
-
+    <style>
+        .card-translucent {
+            background-color: rgba(0, 0, 0, 0.8); /* Fondo negro con transparencia del 80% */
+            color: white; /* Asegurar que el texto sea legible sobre fondo oscuro */
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .form-control-wide {
+            width: 100%; /* Hacer que los input ocupen todo el ancho disponible */
+        }
+        .btn-container {
+            margin-top: 20px; /* Espacio adicional antes del botón */
+            text-align: center;
+        }
+    </style>
     <header>
 
         <nav class="navbar navbar-expand-lg navbar black ">
@@ -42,35 +56,35 @@ $resultado = $mysqli->query($sql);
 
 <body>
     <div class="container">
-        <br><br>
-        <div class="card">
-            <div class="col-md-8">
+        <div class="card card-translucent">
+        <div class="card-body">
+            <div class="col-md-8 mx-auto">
                 <!-- Completar atributos de form -->
                 <form id="registro" name="registro" autocomplete="off" method="post" action="aceptar2.php">
-                    <br>
-                       <p><?php echo $fila2['nombre'] ?> va aceptar el siguiente contrato</p>
-                       <p><input type="hidden" value="<?php echo $fila2['nombre']; ?>" name="nombre"></p>
-                        <label type="hidden" <?php echo $fila2['nombre'] ?> ></label>
+                    
+                    <h2><?php echo $fila2['nombre']; ?> aceptará el siguiente contrato</h2>
+                    <input type="hidden" value="<?php echo $fila2['nombre']; ?>" name="nombre">
                     <div class="form-group">
                         <label>Contrato</label>
-                        <select name="contrato">
+                        <select name="contrato" class="form-control form-control-wide">
                             <?php
                             while ($fila = $resultado->fetch_assoc()) {
                                 echo "<option>$fila[contrato]</option>";
                             }
-
                             $mysqli->close();
                             ?>
                         </select>
                     </div>
-
-
                     <div class="form-group">
-                        <input type="submit" value="Aceptar" class="btn btn-warning">
+                        <input type="submit" value="Aceptar" class="btn btn-warning btn-block">
                     </div>
                 </form>
+                <div class="btn-container">
+                    <a href="contratos2.php?id=<?php echo $id ?>" class="btn btn-secondary">Volver</a>
+                </div>
             </div>
         </div>
+    </div>
     </div>
 
 

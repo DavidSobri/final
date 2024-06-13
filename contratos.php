@@ -46,13 +46,13 @@ $resultado = $mysqli->query($sql);
 		<div class="tabla alig-items-center " style="width:85%; margin: auto;">
 			<table id="tabla" class="table table-primary " style="width:100%">
 				<thead>
-				<tr class="table-black">
+				<tr class="table-black text-center">
 						<th></th>
-						<th>Proximas Actuaciones</th>
+						<th>Próximas Actuaciones</th>
 						<th></th>
 						
 					</tr>
-					<tr class="table-primary">
+					<tr class="table-primary text-center">
 						<th>Contrato</th>
 						<th>Fecha</th>
 						<th></th>
@@ -63,16 +63,17 @@ $resultado = $mysqli->query($sql);
 					<?php
 					while ($fila = $resultado->fetch_assoc()) {
 						//los imprime todos y el enlace pasa la id para ese especifico eliminar
-						echo "<tr class='table'>";
+						echo "<tr class='table text-center'>";
 						echo "<td>$fila[contrato]</td>";
 						echo "<td>$fila[fecha]</td>";
-						echo "<td><a class='btn btn-danger' href='eliminar.php?id=$fila[id_contrato]'>Eliminar</a></td>";
+						echo "<td><a class='btn btn-danger' href='eliminar.php?id=$fila[id_contrato]'>Eliminar</a>        ";
+						echo "<a class='btn btn-warning' href='editar_contrato.php?id=$fila[id_contrato]'>Editar</a></td>";
 						echo "</tr>";
 					}
 					?>
 				</tbody>
 			</table>
-			<a class='btn btn-warning' href='registrar_contrato.php' style='font-weight:bold;'>Nuevo contrato</a>
+			<a class='btn btn-primary' href='registrar_contrato.php' style='font-weight:bold;'>Nuevo contrato</a>
 		</div>
 </body>
 </html>

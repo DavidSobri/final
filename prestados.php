@@ -49,12 +49,12 @@ $resultado = $mysqli->query($sql);
 		</div> -->
 		<div class="d-flex justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-center justify-content-xl-center" style="width:100%">
 		<div class="tabla alig-items-center " style="width:85%; margin: auto;">
-			<table id="tabla" class="table table-primary " style="width:100%">
+			<table id="tabla" class="table table-primary text-center" style="width:100%">
 				<thead>
 				<tr class="table-black">
 						<th></th>
 						<th></th>
-						<th>Musicos en Lista</th>
+						<th>Músicos en Lista</th>
 						<th></th>
 						<th></th>
 
@@ -85,7 +85,8 @@ $resultado = $mysqli->query($sql);
 					}
 					?>
 				</tbody>
-			</table>
+				</table>
+			<a class='btn btn-warning' href='panel_de_control.php' style='font-weight:bold;'>Volver</a>
 		</div>
     </div>
 

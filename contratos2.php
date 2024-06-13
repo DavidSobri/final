@@ -47,13 +47,13 @@ $fila2 = $resultado2->fetch_assoc();
         <div class="d-flex justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-center justify-content-xl-center"
             style="width:100%">
             <div class="tabla alig-items-center " style="width:85%; margin: auto;">
-                <table id="tabla" class="table table-primary " style="width:100%">
+                <table id="tabla" class="table table-primary text-center " style="width:100%">
                     <thead>
-                        <tr class="table-black">
+                        <tr class="table-black text-left">
                             <th></th>
-                            <th>Proximas Actuaciones</th>
-                            <!-- <th></th>
-                        <th></th> -->
+                            <th>Próximas Actuaciones</th>
+                            
+                        
                         </tr>
                         <tr class="table-primary">
                             <th>Contrato</th>

@@ -20,6 +20,14 @@
       background-color: grey; /* Color de fondo del menú desplegable */
     }}
     
+	
+        .card-translucent {
+            background-color: rgba(0, 0, 0, 0.9); /* Fondo blanco con un poco de transparencia */
+        }
+        .form-control-wide {
+            width: 100%; /* Hacer que los input ocupen todo el ancho disponible */
+        }
+    
 </style>
 </head>
 <body>
@@ -55,30 +63,33 @@
 </head>
 	<body>
 		<div class="container">
-			<div class="row" style="justify-content: center;">
-				<h1>Registrar Nuevo Contrato</h1>
-			</div>
 			<br><br>
-			<div class="card">
-				<div class="col-md-8">
-					<!-- Completar atributos de form -->
-					<form id="registro" name="registro" autocomplete="off" method="post" action="registrar_contrato2.php">
-						<br>
-						<div class="form-group">
-							<label>Nombre <input class="form-control" type="text" name="nombre" maxlength="50" required></label>
-						</div>
-
-						<div class="form-group">
-						<label>Fecha <input class="form-control" type="date" name="fecha" required></label><br/>
-                        </div>
-
-						<br>
-						<div class="form-group">
-							<input type="submit" value="Registrar" class="btn btn-warning">
-						</div>
-					</form>
-				</div>
-			</div>
+			<div class="card card-translucent">
+        <div class="card-body">
+            <div class="row justify-content-center">
+                <h1 class="text-center">Registrar Nuevo Contrato</h1>
+            </div>
+            <!-- Completar atributos de form -->
+            <form id="registro" name="registro" autocomplete="off" method="post" action="registrar_contrato2.php">
+                <br>
+                <div class="form-group">
+                    <label>Nombre</label>
+                    <input class="form-control form-control-wide" type="text" name="nombre" maxlength="50" required>
+                </div>
+                <div class="form-group">
+                    <label>Fecha</label>
+                    <input class="form-control form-control-wide" type="date" name="fecha" required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <input type="submit" value="Registrar" class="btn btn-warning btn-block">
+                </div>
+            </form>
+			<div class="row justify-content-center">
+                <a href="contratos.php" class="btn btn-secondary btn-block col-md-4">Volver</a>
+            </div>
+        </div>
+    </div>
 		</div>
 		
 		<!-- Optional JavaScript -->

@@ -76,14 +76,14 @@ $fila = $resultado->fetch_assoc();
 	<div class="d-flex justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-center justify-content-xl-center"
 		style="width:100%">
 		<div class="tabla alig-items-center " style="width:85%; margin: auto;">
-			<table id="tabla" class="table table-primary " style="width:100%">
+			<table id="tabla" class="table table-primary text-center" style="width:100%">
 				<thead>
-					<tr class="table-black">
+					<tr class="table-black text-left">
 						<th><?php echo $fila['nombre'], "  " ,$fila['apellido']; ?></th>
 						<th></th>
 					</tr>
 
-					<tr class="table-primary">
+					<tr class="table-primary text-center">
 						<th>Contrato aceptados</th>
 						<th>Fecha</th>
 					</tr>

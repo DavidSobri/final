@@ -77,16 +77,16 @@ $resultado = $mysqli->query($sql);
 		<div class="tabla alig-items-center " style="width:85%; margin: auto;">
 			<table id="tabla" class="table table-primary " style="width:100%">
 				<thead>
-				<tr class="table-black">
+				<tr class="table-black text-center">
 						<th></th>
 						<th></th>
 						<th></th>
-						<th>Musicos en Lista</th>
+						<th>Músicos en Lista</th>
 						<th></th>
 						<th></th>
 						
 					</tr>
-					<tr class="table-primary">
+					<tr class="table-primary text-center">
 						<th>Nombre</th>
 						<th>Apellido</th>
 						<th>Telefono</th>
@@ -100,7 +100,7 @@ $resultado = $mysqli->query($sql);
 					<?php
 					//recorre e imprime los datos
 					while ($fila = $resultado->fetch_assoc()) {
-						echo "<tr class='table'>";
+						echo "<tr class='table text-center'>";
 						echo "<td>$fila[nombre]</td>";
 						echo "<td>$fila[apellido]</td>";
 						echo "<td>$fila[telefono]</td>";

@@ -26,7 +26,15 @@ $fila2=$resultado2->fetch_assoc();
     <link rel="shortcut icon" href="images/logo.png">
 
     <title>Agrupación Santa Maria Magdalena</title>
-
+    <style>
+        .card-translucent {
+            background-color: rgba(0, 0, 0, 0.8); /* Fondo negro con transparencia del 80% */
+            color: white; /* Asegurar que el texto sea legible sobre fondo oscuro */
+        }
+        .form-control-wide {
+            width: 100%; /* Hacer que los input ocupen todo el ancho disponible */
+        }
+    </style>
     <header>
 
         <nav class="navbar navbar-expand-lg navbar black ">
@@ -42,38 +50,49 @@ $fila2=$resultado2->fetch_assoc();
 
 <body>
     <div class="container">
-        <br><br>
-        <div class="card">
-            <div class="col-md-8">
+        <div class="card card-translucent">
+        <div class="card-body">
+            <div class="col-md-8 mx-auto">
                 <!-- Completar atributos de form -->
                 <form id="registro" name="registro" autocomplete="off" method="post" action="datos2.php">
                     <br>
-                  <input type="hidden"  value="<?php echo $fila2['id']; ?>" name="id">
-                    <p>Nombre: <input type="text"  value="<?php echo $fila2['nombre']; ?>" name="nombre"></p>
-                       <p>Apellido: <input type="text"  value="<?php echo $fila2['apellido']; ?>" name="apellido"></p>
-                       <p>Telefono: <input type="text" value="<?php echo $fila2['telefono']; ?>" name="telefono"></p>
-                       <p>Cuerda: <input type="text" readonly value="<?php echo $fila2['cuerda']; ?>" name="cuerda"></p>
-
+                    <input type="hidden" value="<?php echo $fila2['id']; ?>" name="id">
+                    <div class="form-group">
+                        <label>Nombre</label>
+                        <input type="text" class="form-control form-control-wide" value="<?php echo $fila2['nombre']; ?>" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Apellido</label>
+                        <input type="text" class="form-control form-control-wide" value="<?php echo $fila2['apellido']; ?>" name="apellido" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Teléfono</label>
+                        <input type="text" class="form-control form-control-wide" value="<?php echo $fila2['telefono']; ?>" name="telefono" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Cuerda</label>
+                        <input type="text" class="form-control form-control-wide" readonly value="<?php echo $fila2['cuerda']; ?>" name="cuerda">
+                    </div>
                     <div class="form-group">
                         <label>Propiedad Instrumento</label>
-                        <select name="propiedad" readonly>
+                        <select name="propiedad" class="form-control form-control-wide" readonly>
                             <?php
-                      
                                 echo "<option>$fila2[Propiedad]</option>";
-                         
-
-                            $mysqli->close();
+                                $mysqli->close();
                             ?>
                         </select>
                     </div>
-
-
                     <div class="form-group">
-                        <input type="submit" value="Aceptar" class="btn btn-warning">
+                        <input type="submit" value="Aceptar" class="btn btn-warning btn-block">
                     </div>
                 </form>
+                <br>
+                <div class="row justify-content-center">
+                    <a href="menu_usuario.php?id=<?php echo $id ?>" class="btn btn-secondary btn-block col-md-4">Volver</a>
+                </div>
             </div>
         </div>
+    </div>
     </div>
 
 
