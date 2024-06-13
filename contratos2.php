@@ -74,8 +74,8 @@ $fila2 = $resultado2->fetch_assoc();
                         ?>
                     </tbody>
                 </table>
-                <a class='btn btn-warning' href='aceptar.php?id=<?php echo $id ?>' style='font-weight:bold;'>Aceptar un
-                    contrato</a>
+                <a class='btn btn-primary' href='aceptar.php?id=<?php echo $id ?>' style='font-weight:bold;'>Aceptar un contrato</a>    
+                    <a class='btn btn-warning' href='menu_usuario.php?id=<?php echo $id ?>' style='font-weight:bold;'>Volver</a>
             </div>
 </body>
 
