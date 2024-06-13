@@ -51,10 +51,12 @@ $resultado = $mysqli->query($sql);
 		<div class="tabla alig-items-center " style="width:85%; margin: auto;">
 			<table id="tabla" class="table table-primary text-center" style="width:100%">
 				<thead>
-				<tr class="table-black">
+				<tr class="table-black text-right">
+						<th></th>
 						<th></th>
 						<th></th>
 						<th>Músicos en Lista</th>
+						<th></th>
 						<th></th>
 						<th></th>
 
@@ -65,7 +67,8 @@ $resultado = $mysqli->query($sql);
 						<th>Apellido</th>
 						<th>Telefono</th>
 						<th>Cuerda</th>
-
+						<th>Tipo</th>
+						<th></th>
 					</tr>
 				</thead>
 				<tbody>
@@ -73,7 +76,7 @@ $resultado = $mysqli->query($sql);
 					while ($fila = $resultado->fetch_assoc()) {
 						echo "<tr class='table'>";
 						//consulta para relacionar el id del musico junto al del instrumentos 
-                        $sql2 = "SELECT id_instrumento from intrumento where id_musico=$fila[id]";
+                        $sql2 = "SELECT id_instrumento, tipo from intrumento where id_musico=$fila[id]";
 						$resultado2 = $mysqli->query($sql2);
 						$fila2 = $resultado2->fetch_assoc();
                         echo "<td>$fila2[id_instrumento]</td>";
@@ -81,11 +84,15 @@ $resultado = $mysqli->query($sql);
 						echo "<td>$fila[apellido]</td>";
 						echo "<td>$fila[telefono]</td>";
 						echo "<td>$fila[cuerda]</td>";
+						echo "<td>$fila2[tipo]</td>";
+						echo "<td><a class='btn btn-danger' href='eliminar.php?id=$fila2[id_instrumento]'>Eliminar</a>        ";
+						echo "<a class='btn btn-warning' href='editar_prestados.php?id=$fila2[id_instrumento]'>Editar</a></td>";
 						echo "</tr>";
 					}
 					?>
 				</tbody>
 				</table>
+				<a class='btn btn-primary' href='registrar_prestamo.php' style='font-weight:bold;'>Registrar</a>         
 			<a class='btn btn-warning' href='panel_de_control.php' style='font-weight:bold;'>Volver</a>
 		</div>
     </div>
