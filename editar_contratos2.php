@@ -64,16 +64,16 @@ $fila2=$resultado2->fetch_assoc();
 		echo "<div class='d-flex justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-center justify-content-xl-center' style='width:100%'>";
     echo "<h3>Datos modificados correctamente</h3><br>";
     echo "</div>";
-    echo "<div class='d-flex justify-content-center mt-4'>"; // Contenedor flex para centrar y separar los botones
-echo "<div class='mx-2'>"; // Espaciado horizontal entre los botones
+    echo "<div class='d-flex justify-content-center mt-4'>"; 
+echo "<div class='mx-2'>"; // 
 
-echo "<a href='panel_de_control.php' class='btn btn-primary'>Ir al inicio</a>"; // Botón "Ir al inicio"
+echo "<a href='panel_de_control.php' class='btn btn-primary'>Ir al inicio</a>"; 
 
-echo "</div>"; // Fin del primer contenedor de botón
+echo "</div>"; 
 
-echo "<div class='mx-2'>"; // Espaciado horizontal entre los botones
+echo "<div class='mx-2'>"; 
 
-echo "<a href='contratos.php' class='btn btn-warning'>Ver actuaciones</a>"; // Botón "Ver actuaciones"
+echo "<a href='contratos.php' class='btn btn-warning'>Ver actuaciones</a>";
 
 echo "</div>"; 
 echo "</div>"; 
