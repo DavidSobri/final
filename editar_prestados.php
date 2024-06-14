@@ -2,8 +2,7 @@
 
 require 'conexion.php';
 //pillo los datos por su id
-$id = $_GET['id'];
-$sql2 = "SELECT * FROM intrumento where id_instrumento=$id";
+$sql2 = "SELECT * FROM intrumento where id_instrumento= null";
 $resultado2 = $mysqli->query($sql2);
 $fila2=$resultado2->fetch_assoc();
 
@@ -54,7 +53,7 @@ $fila2=$resultado2->fetch_assoc();
         <div class="card-body">
             <div class="col-md-8 mx-auto">
                 <!-- Completar atributos de form -->
-                <form id="registro" name="registro" autocomplete="off" method="post" action="editar_prestados2.php">
+                <form id="registro" name="registro" autocomplete="off" method="post" action="registrar_prestados2.php">
                     <br>
                     <input type="hidden" value="<?php echo $fila2['id_instrumento']; ?>" name="id">
                     <div class="form-group">

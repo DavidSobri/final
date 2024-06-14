@@ -85,14 +85,14 @@ $resultado = $mysqli->query($sql);
 						echo "<td>$fila[telefono]</td>";
 						echo "<td>$fila[cuerda]</td>";
 						echo "<td>$fila2[tipo]</td>";
-						echo "<td><a class='btn btn-danger' href='eliminar.php?id=$fila2[id_instrumento]'>Eliminar</a>        ";
-						echo "<a class='btn btn-warning' href='editar_prestados.php?id=$fila2[id_instrumento]'>Editar</a></td>";
+						//echo "<td><a class='btn btn-danger' href='eliminar.php?id=$fila2[id_instrumento]'>Eliminar</a>        ";
+						echo "<td><a class='btn btn-primary' href='editar_prestados.php?id=$fila2[id_instrumento]'>Editar</a></td>";
 						echo "</tr>";
 					}
 					?>
 				</tbody>
 				</table>
-				<a class='btn btn-primary' href='registrar_prestamo.php' style='font-weight:bold;'>Registrar</a>         
+				<!--<a class='btn btn-primary' href='registrar_prestamo.php' style='font-weight:bold;'>Registrar</a>-->        
 			<a class='btn btn-warning' href='panel_de_control.php' style='font-weight:bold;'>Volver</a>
 		</div>
     </div>
