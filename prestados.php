@@ -92,7 +92,7 @@ $resultado = $mysqli->query($sql);
 					?>
 				</tbody>
 				</table>
-				<!--<a class='btn btn-primary' href='registrar_prestamo.php' style='font-weight:bold;'>Registrar</a>-->        
+				<!--<a class='btn btn-primary' href='registrar_prestamo.php' style='font-weight:bold;'>Registrar</a>    -->     
 			<a class='btn btn-warning' href='panel_de_control.php' style='font-weight:bold;'>Volver</a>
 		</div>
     </div>

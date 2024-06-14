@@ -2,7 +2,8 @@
 
 require 'conexion.php';
 //pillo los datos por su id
-$sql2 = "SELECT * FROM intrumento where id_instrumento= null";
+$id = $_GET['id'];
+$sql2 = "SELECT * FROM intrumento where id_instrumento=$id";
 $resultado2 = $mysqli->query($sql2);
 $fila2=$resultado2->fetch_assoc();
 
